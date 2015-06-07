@@ -1,0 +1,15 @@
+// Navbar styles
+// ======================================
+
+.navbar-transparent {
+	background: none;
+	z-index: $z-index-component;
+	position: absolute;
+}
+
+.breadcrumb-criteria {
+	
+	li {
+		margin-right: 16px;
+	}
+}

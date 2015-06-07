@@ -1,0 +1,17 @@
+<div class="view-content container">
+	<h1>Result</h1>
+	<ul class="list-pellets">
+		{{#each items}}
+		<li>
+			<a class="btn-pellet" href="#/detail/{{this.id}}"><span>{{this.name}}</span></a>
+		</li>
+		{{/each}}
+	</ul>
+	{{#ifEmpty items}}
+	<p class="text-center">No items match your search.</p>
+	{{/ifEmpty}}
+	<div class="form-group text-center">
+		<a class="btn btn-main" href="#/browse">Go back</a>
+		<a class="btn btn-main reset" href="#/browse">Start over</a>
+	</div>
+</div>

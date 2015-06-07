@@ -1,0 +1,49 @@
+.bg li {
+	@include transition(opacity 1s);
+	opacity: 0;
+
+	&.current-bg { opacity: 1 };
+}
+
+@-webkit-keyframes input-highlight {
+	0% {
+		left: 20%;
+		-webkit-transform: scaleX(20%);
+		transform: scaleX(20%);
+	}
+	99% {
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
+		left: 0;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes input-highlight {
+	0% {
+		left: 20%;
+		-webkit-transform: scaleX(20%);
+		transform: scaleX(20%);
+	}
+	99% {
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
+		left: 0;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes dropdown {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+	}
+}

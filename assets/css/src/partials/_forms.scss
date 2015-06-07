@@ -1,0 +1,202 @@
+button { color: $input-color; }
+
+.form-vertical {
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+.help-block {
+	opacity: 0.8;
+	margin-bottom: 5px;
+}
+
+select.form-control {
+	height: 23px;
+}
+select[multiple].form-control {
+	&, &:focus, &.focus {
+		height: 85px;
+	}
+}
+
+.form-control-wrapper {
+	position: relative;
+
+	.form-control:focus, .form-control.focus {
+		outline: none;
+	}
+
+	.floating-label {
+		color: $input-color-dis;
+		font-size: 14px;
+		position: absolute;
+		pointer-events: none;
+		left: 0px;
+		top: 5px;
+		transition: 0.2s ease all;
+		opacity: 0;
+	}
+	.form-control:not(.empty) ~ .floating-label {
+		top: -10px;
+		font-size: 10px;
+		opacity: 1;
+	}
+
+}
+
+.form-group {
+	position: relative;
+
+	label {
+		@include transition(0.2s ease all);
+		opacity: 0;
+		font-weight: normal;
+		font-size:14px;
+		position: absolute;
+		pointer-events: none;
+		left: 3px;
+		top: 0;
+	}
+
+	.form-control {
+		&:not(textarea):not(select) {
+			height: 28px;
+		}
+		opacity: 0.85;
+		color: #fff;
+		padding: 0;
+		float: none;
+		border: 0;
+		box-shadow: none;
+		border-radius: 0;
+		background: transparent;
+		border-bottom: 2px solid #fff;
+		width: 100%;
+		margin-bottom: 12px;
+
+		&:disabled {
+			border-style: dashed;
+		}
+
+		&:focus {
+			opacity: 1;
+			outline: none;
+
+			& ~ .form-decoration:after {
+				width: 100%;
+			}
+			& ~ .form-decoration:before {
+				// only do the transition on blur
+				@include transition(0.2s ease all);
+				left: 0;
+				width: 0;
+				//opacity: 0.8;
+				visibility: visible;
+			}
+
+			& ~ label {
+				top: -26px;
+				opacity: 1;
+			}
+		}
+
+		// highlight
+		& ~ .form-decoration:after {
+			@include transition(0.2s ease all);
+			content: '';
+			height: 3px;
+			width: 0;
+			bottom: -1px;
+			position: absolute;
+			background: #fff;
+			z-index: $z-index-component;
+		}
+
+		& ~ .form-decoration:before {
+			content: '';
+			width: 60px;
+			height: 75%;
+			background: #fff;
+			position: absolute;
+			left: 60px;
+			top: 0;
+			opacity: 0.5;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+	}
+
+	.form-control:focus:invalid ~ .form-decoration:after {
+		background: $brand-danger;
+	}
+
+}
+
+.input-group {
+	.form-control-wrapper {
+		.form-control {
+			float: none;
+		}
+		margin-right: 5px;
+		margin-left: 5px;
+		bottom: -10px;
+	}
+	.input-group-addon {
+		border: 0;
+	}
+	.input-group-btn .btn {
+		border-radius: 4px;
+	}
+}
+
+select.form-control {
+	border: 0;
+	box-shadow: none;
+	border-bottom: 3px solid $input-color-dis;
+	border-radius: 0;
+	&:focus, &.focus {
+		box-shadow: none;
+		border-color: $input-color;
+	}
+}
+
+// Input files (kinda hack)
+.form-control-wrapper input[type=file] {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+.control-label {
+	text-align: right;
+}
+
+.form-login {
+	.form-group {
+		margin-bottom: 40px;
+	}
+
+	.btn[type="submit"] {
+		.icon-lock {
+			position: absolute;
+			top: 25%; // feels about right
+			right: 10px;
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		&:hover, &:focus {
+			padding-right: 28px; // for the lock
+			.icon-lock {
+				opacity: 1;
+			}
+		}
+	}
+}

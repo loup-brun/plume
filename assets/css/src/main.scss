@@ -1,0 +1,28 @@
+// This is the main application stylesheet. It should include or import all
+// stylesheets used throughout the application as this is the only stylesheet in
+// the Grunt configuration that is automatically processed.
+
+// Variables and mixins
+@import 'partials/variables';
+@import 'partials/mixins';
+
+// Thirdparty
+@import '../../lib/bootstrap-sass/lib/bootstrap';
+
+
+// This is our main variables file. We must include it last so we can overwrite any variable
+// definitions in our imported stylesheets.
+
+// General components
+@import 'partials/animations';
+@import 'partials/theme';
+@import 'partials/plume-icons';
+@import 'partials/navbar';
+@import 'partials/forms';
+
+// Section-specific components
+@import 'partials/home';
+@import 'partials/login';
+@import 'partials/process';
+@import 'partials/details';
+@import 'partials/buttons';

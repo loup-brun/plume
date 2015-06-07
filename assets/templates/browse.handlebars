@@ -1,0 +1,48 @@
+<div class="view-content container">
+	<div id="search-box">
+		<div class="container">
+			<form>
+				<div class="form-group">
+					<input class="form-control" id="searchBox" name="searchBox" placeholder="Find strains..." type="text">
+					<span class="form-decoration"></span>
+					<label for="searchBox" class="control-label">Search</label>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="text-right">
+	<a class="btn btn-sm next">Skip this step <span class="icon icon-angle-right"></span></a>
+	{{#ifNotEmpty criteria}}
+		<a href="#/browse/result" title="Continue with the current selection" class="btn btn-sm">Search with current selection <span class="icon icon-check"></span></a> 
+		<a href="#/browse" class="btn btn-sm reset" title="Clear the current selection">Clear selection <span class="icon icon-close"></span></a>
+	{{/ifNotEmpty}}
+	</div>
+	<div id="breadcrumbs" class="row">
+		<div class="col-md-11">
+			<ul class="breadcrumb breadcrumb-criteria">
+				{{#ifEmpty criteria}}
+				<span class="icon icon-tag"></span> (empty)
+				{{/ifEmpty}}
+				{{#each criteria}}
+				<li>
+					<h6 class="help-block">
+						<a href="#/browse/{{ @key }}" title="Select {{ @key }}"><span class="icon icon-tag"></span> {{ @key }}</a>
+					</h6>
+					<a href="#/browse/{{ @key }}" title="Select {{ @key }}">{{this}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<h1>{{category}}</h1>
+
+	<ul class="list-pellets">
+		{{#getAvailableValues data category}}
+		<li class="btn-pellet select">
+			<span>{{this}}</span>
+		</li>
+		{{/getAvailableValues}}
+	</ul>
+</div>

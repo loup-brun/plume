@@ -1,0 +1,128 @@
+[
+	{
+		"name": "After Dinner",
+		"id": "after-dinner",
+		"description": "This delicious dessert is perfect for when friends and family are around the table.",
+		"images": [
+			"assets/img/strains/after-dinner.jpg"
+		],
+		"condition": "physical",
+		"ailment": "stress",
+		"ingestion": "smoke",
+		"effect": "happy",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Bed Time",
+		"id": "bed-time",
+		"description": "This pure Indica strain is designed to slow things down.",
+		"images": [
+			"assets/img/strains/bed-time.jpg"
+		],
+		"condition": "physical",
+		"ailment": "depression",
+		"ingestion": "edible",
+		"effect": "relax",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Bedica",
+		"id": "bedica",
+		"description": "The latest variety is Bedica, an “Indica” variety.",
+		"images": [
+			"assets/img/strains/bedica.jpg"
+		],
+		"condition": "psychological",
+		"ailment": "insomnia",
+		"ingestion": "vapor",
+		"effect": "energy",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Bediol",
+		"id": "bediol",
+		"description": "Cannabis Flos variety Bediol is a combination THC/CBD Sativa. ",
+		"images": [
+			"assets/img/strains/bediol.jpg"
+		],
+		"condition": "psychological",
+		"ailment": "fatigue",
+		"ingestion": "hybrid",
+		"effect": "focus",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Bedrocan",
+		"id": "bedrocan",
+		"description": "Developed in the Netherlands out of a requirement by the Dutch Health Ministry to have at least one “high THC” variety available to patients. ",
+		"images": [
+			"assets/img/strains/bedrocan.jpg"
+		],
+		"condition": "physical",
+		"ailment": "adhd",
+		"ingestion": "smoke",
+		"effect": "euphoric",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Bedrolite",
+		"id": "bedrolite",
+		"description": "The Bedrolite variety is a “Sativa” with medium CBD and very low THC content.",
+		"images": [
+			"assets/img/strains/bedrolite.jpg"
+		],
+		"condition": "psychological",
+		"ailment": "anxiety",
+		"ingestion": "smoke",
+		"effect": "talkative",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Bedropuur",
+		"id": "bedropuur",
+		"description": "Cannabis Flos variety Bedropuur (pronounced “pure”) is a high THC Indica variety.",
+		"images": [
+			"assets/img/strains/bedropuur.jpg"
+		],
+		"condition": "physical",
+		"ailment": "stress",
+		"ingestion": "smoke",
+		"effect": "happy",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Good Morning",
+		"id": "good-morning",
+		"description": "Wake up and feel alive. All natural with a rich tropical perfume with mango, citrus and floral overtones.",
+		"images": [
+			"assets/img/strains/good-morning.jpg"
+		],
+		"condition": "psychological",
+		"ailment": "phantom pain",
+		"ingestion": "vapor",
+		"effect": "giggly",
+		"symptoms": "",
+		"price": ""
+	},
+	{
+		"name": "Lunch Break",
+		"id": "lunch-break",
+		"description": "A refreshing wake up call to combat the 3pm blues, with a unique revitalizing taste. ",
+		"images": [
+			"assets/img/strains/lunch-break.jpg"
+		],
+		"condition": "physical",
+		"ailment": "stress",
+		"ingestion": "edible",
+		"effect": "focus",
+		"symptoms": "",
+		"price": ""
+	}
+]

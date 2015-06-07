@@ -1,0 +1,22 @@
+<div class="container detail-wrap">
+	<div class="row">
+		<div class="col-md-6">
+			<h1>{{item.name}}</h1>
+			<p>{{item.description}}</p>
+		</div>
+		<div class="col-md-6">
+			<ul class="list-thumbnails">
+				{{#each item.images}}
+				<li>
+					<img class="img-thumbnail" src="{{this}}" />
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<a class="btn btn-main" href="#/browse"><span class="icon icon-angle-left"></span> Back to browse</a>
+		</div>
+	</div>
+</div>

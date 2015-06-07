@@ -1,0 +1,14 @@
+{
+	"name": "After Dinner",
+	"id": "after-dinner",
+	"description": "This delicious dessert is perfect for when friends and family are around the table.",
+	"images": [
+		"assets/img/strains/after-dinner.jpg"
+	],
+	"condition": "",
+	"ailment": "",
+	"ingestion": "",
+	"effects": "",
+	"symptoms": "",
+	"price": ""
+}
