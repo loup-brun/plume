@@ -2,159 +2,163 @@
 // ======================================
 
 ::-moz-selection {
-	background: $brand-primary;
-	color: #fff;
+  background: $brand-primary;
+  color: #fff;
 }
 ::selection {
-	background: $brand-primary;
-	color: #fff;
+  background: $brand-primary;
+  color: #fff;
 }
 
 body,html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	//color: #fff;
-	//background: $gray-darker;
-	overflow: hidden;
+  //color: #fff;
+  //background: $gray-darker;
+  overflow: hidden;
 }
 
 a {
-	&:hover,
-	&:focus {
-		text-decoration: none;
-		outline: none;
-	}
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
 }
 
 .view-wrap {
-	//@include flex;
-	//@include align-center;
-	padding-top: $navbar-height; // for fixed navbar
-	z-index: 3;
-	height: 100%;
-	width: 100%;
-	overflow-y: scroll;
+  //@include flex;
+  //@include align-center;
+  padding-top: $navbar-height; // for fixed navbar
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
 
-	position: absolute;
+  position: absolute;
 }
 
 .navbar-nav {
-	float: left;
+  float: left;
 }
 
 .navbar-right {
-	float: right !important;
-	.dropdown-menu {
-		right: 0 !important;
-		left: auto;
-	}
+  float: right !important;
+  .dropdown-menu {
+    right: 0 !important;
+    left: auto;
+  }
 }
 
 #shared-ui {
-	z-index: $z-index-component;
-	margin-bottom: 20px;
+  z-index: $z-index-component;
+  margin-bottom: 20px;
 }
 
 #top-logo {
-	width: 150px;
-	height: auto;
+  width: 150px;
+  height: auto;
 }
 
 // ov
 
+.dropdown-toggle {
+  cursor: pointer;
+}
+
 .navbar-right {
-	.dropdown-menu {
-		right: 0;
-		left: auto;
-	}
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
 }
 
 .dropdown-menu {
-	box-shadow: none;
-	background: rgba(0,0,0,.2);
+  box-shadow: none;
+  background: rgba(0,0,0,.2);
 
-	li {
-		&:hover {
-			background: rgba(255,255,255,.3);
-		}
-	}
+  li {
+    &:hover {
+      background: rgba(255,255,255,.3);
+    }
+  }
 }
 
 .dropdown {
-	&.open {
-		.dropdown-menu {
-			@include animation(dropdown 0.5s);
-		}
-	}
+  &.open {
+    .dropdown-menu {
+      @include animation(dropdown 0.5s);
+    }
+  }
 }
 
 .view {
-	@include transition(opacity $transitDuration);
-	z-index: $z-index-section;
-	opacity: 0; // animated with js
+  @include transition(opacity $transitDuration);
+  z-index: $z-index-section;
+  opacity: 0; // animated with js
 
 }
 
 .view-current {
-	@include transition-delay($transitDuration);
-	//display: block;
-	opacity: 1;
-	z-index: $z-index-section + 1;
+  @include transition-delay($transitDuration);
+  //display: block;
+  opacity: 1;
+  z-index: $z-index-section + 1;
 }
 
 .bg {
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	overflow: hidden;
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0,0,0,.5);
-		z-index: 2;
-	}
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+  }
 
-	ul {
-		@include square(100%);
-		list-style: none outside none;
-		margin: 0;
-		padding: 0;
-	}
+  ul {
+    @include square(100%);
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+  }
 
-	li {
-		@include transition(opacity $transitDuration);
-		@include square(100%);
-		//display: none;
-		opacity: 0;
-		float: left;
-		width: 100%;
-		margin-right: -100%;
+  li {
+    @include transition(opacity $transitDuration);
+    @include square(100%);
+    //display: none;
+    opacity: 0;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
 
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		&.bg-home { background-image: url('../img/farm-morning.jpg'); }
-		&.bg-patients { background-image: url('../img/normandy_farm_field.jpg'); }
-		&.bg-doctors { background-image: url('../img/plain-field.jpg'); }
-		&.bg-condition { background-image: url('../img/field.jpg'); }
-		&.bg-ailment { background-image: url('../img/dandelion-field.jpg'); }
-		&.bg-ingestion { background-image: url('../img/plant-macro.jpg'); }
-		&.bg-effect { background-image: url('../img/medical-marijuana.jpg'); }
-		&.bg-result { background-image: url('../img/medical-marijuana.jpg'); }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.bg-home { background-image: url('../img/farm-morning.jpg'); }
+    &.bg-patients { background-image: url('../img/normandy_farm_field.jpg'); }
+    &.bg-doctors { background-image: url('../img/plain-field.jpg'); }
+    &.bg-condition { background-image: url('../img/field.jpg'); }
+    &.bg-ailment { background-image: url('../img/dandelion-field.jpg'); }
+    &.bg-ingestion { background-image: url('../img/plant-macro.jpg'); }
+    &.bg-effect { background-image: url('../img/medical-marijuana.jpg'); }
+    &.bg-result { background-image: url('../img/medical-marijuana.jpg'); }
 
-		&.bg-detail { background-image: url('../img/plain-field.jpg'); }
+    &.bg-detail { background-image: url('../img/plain-field.jpg'); }
 
-		&.bg-current { opacity: 1; z-index: 2 };
-	}
+    &.bg-current { opacity: 1; z-index: 2 };
+  }
 }
 
 h1, h2 { text-align: center; margin: 0 auto 30px; }
@@ -164,23 +168,23 @@ h1,h2,h3,h4,h5,h6 { text-transform: uppercase; }
 //h6 { margin: 4px 0; }
 
 .loader {
-	@include square(50px);
-	display: none; // initially display to none
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	//background-image: url(../img/ajax-loader.gif);
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: $z-index-component
+  @include square(50px);
+  display: none; // initially display to none
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  //background-image: url(../img/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: $z-index-component
 }
 
 .img-thumbnail {
-	background-color: transparent;
-	border: 3px solid #fff;
-	padding: 0;
+  background-color: transparent;
+  border: 3px solid #fff;
+  padding: 0;
 }
 
 .detail-wrap {
-	margin-top: 50px;
+  margin-top: 50px;
 }

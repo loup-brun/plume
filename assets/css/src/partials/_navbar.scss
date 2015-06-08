@@ -2,14 +2,16 @@
 // ======================================
 
 .navbar-transparent {
-	background: none;
-	z-index: $z-index-component;
-	position: absolute;
+  background: none;
+  z-index: $z-index-component;
+  position: absolute;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .breadcrumb-criteria {
-	
-	li {
-		margin-right: 16px;
-	}
+
+  li {
+    margin-right: 16px;
+  }
 }

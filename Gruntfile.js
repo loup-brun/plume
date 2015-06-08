@@ -57,9 +57,15 @@ module.exports = function ( grunt ) {
     uglify: {
       js: {
         files: [{
-          '<%= js_path %>custom.min.js': [
-            //'lib/jquery/dist/jquery.js',
-            //'lib/underscore/underscore.js',
+          '<%= js_path %>main.min.js': [
+            'assets/lib/jquery/dist/jquery.min.js',
+            'assets/lib/modernizr/modernizr.js',
+            'assets/lib/underscore/underscore-min.js',
+            'assets/lib/backbone/backbone.js',
+            'assets/lib/handlebars/handlebars.runtime.min.js',
+            'assets/js/templates.js',
+            'assets/lib/spin.js/spin.js',
+            'assets/lib/spin.js/jquery.spin.js',
             '<%= js_path %>src/*.js'
           ],
           //expand: true
@@ -83,7 +89,7 @@ module.exports = function ( grunt ) {
     jshint: {
       files: {
         //src: ['<%= js_path %>*.js'],
-        src: ['<%= js_path %>src/main.js'],
+        src: ['<%= js_path %>src/custom.js'],
       },
       options: {
         curly: true,
